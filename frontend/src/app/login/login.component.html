@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)" style="border:1px solid #ccc">
+    <div class="container">
+      <h1>Login</h1>
+      <p>Login by your email address.</p>
+      <hr>
+
+      <label for="email"><b>Email</b></label><br>
+      <span style="color: red;"  *ngIf="email && email.invalid && email.touched">This field is invalid</span>
+      <input type="text" placeholder="Enter Email" name="email" formControlName="email" required>
+
+
+      <div class="clearfix">
+        <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+        <!-- <button [routerLink]="['/profile/', apiData]" [disabled]="loginForm.invalid"class="signupbtn" ng-click="performCall()">Login</button> -->
+        <button [disabled]="loginForm.invalid"class="signupbtn" >Login</button>
+
+      </div>
+    </div>
+  </form>
+
+</body>
+
+</html>

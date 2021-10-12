@@ -1,0 +1,14 @@
+<h1> Welcome: {{userData.name}}</h1>
+
+<table>
+  <tr>
+    <th>Channel ID</th>
+    <th>Channel Name</th>
+    <th>Created At</th>
+  </tr>
+  <tr *ngFor="let channelAPIData of channelAPIData">
+    <td>{{channelAPIData.id}}</td>
+    <td>{{channelAPIData.name}}</td>
+    <td>{{channelAPIData.createdAt}}</td>
+  </tr>
+</table>
